@@ -13,7 +13,7 @@ SECRET_KEY = '$+j6afln-4n1!g#$p7k88_xx)g5)fj7^xx)_)vnm*(17+^rj!k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['amonguschat.herokuapp.com']
+ALLOWED_HOSTS = ['amonguschat.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -110,6 +110,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
 
 # BLOG: https://data-flair.training/blogs/discussion-forum-python-django/
 

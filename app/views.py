@@ -26,7 +26,7 @@ def ind(request):
               'count':count,
               'discussions':discussions}
     return render(request, 'app/home.html', context)
- 
+
 def forumm(request):
     form = CreateInForum()
     if request.method == 'POST':
