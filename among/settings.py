@@ -109,6 +109,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # BLOG: https://data-flair.training/blogs/discussion-forum-python-django/
 
