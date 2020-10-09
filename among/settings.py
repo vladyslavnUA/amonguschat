@@ -13,7 +13,7 @@ SECRET_KEY = '$+j6afln-4n1!g#$p7k88_xx)g5)fj7^xx)_)vnm*(17+^rj!k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['amonguschat.herokuapp.com']
 
 
 # Application definition
