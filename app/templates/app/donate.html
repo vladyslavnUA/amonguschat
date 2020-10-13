@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Among Us Chat | Donate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180175294-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-180175294-1');
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> <a class="navbar-brand" href="https://amonguschat.herokuapp.com"><img src="{% static 'logo.png' %}" alt="among us chat logo" style="width:50%;"></a>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'ind' %}" style="font-family: Courier;">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'about' %}" style="font-family: Courier;">About</a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" style="font-family: Courier;">Community</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="{% url 'donate' %}" style="font-family: Courier;">Donate</a> 
+                                        <a class="dropdown-item" href="{% url 'servers' %}" style="font-family: Courier;">Servers</a> 
+                                        <a class="dropdown-item" href="{% url 'affiliate' %}" style="font-family: Courier;">Affiliate Links</a>
+                                        <div class="dropdown-divider">
+                                        </div> <a class="dropdown-item" href="{% url 'sponsors' %}" style="font-family: Courier;">Sponsors</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="text" /> 
+                                <button class="btn btn-primary my-2 my-sm-0" type="submit" style="font-family: Courier;">
+                                    Search
+                                </button>
+                            </form> -->
+                            <ul class="navbar-nav ml-md-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'faq' %}" style="font-family: Courier;">FAQ <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" style="font-family: Courier;">Support</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="{% url 'contact' %}" style="font-family: Courier;">Direct Contact</a> 
+                                        <a class="dropdown-item" href="{% url 'collaborate' %}" style="font-family: Courier;">Collaborate</a> 
+                                        <a class="dropdown-item" href="{% url 'sponsor' %}" style="font-family: Courier;">Sponsor Us</a>
+                                        <div class="dropdown-divider">
+                                        </div> <a class="dropdown-item" href="mailto:welcome.amongus@gmail.com?subject=Report" style="color:red;font-family: Courier; text-decoration: none;">Report</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                </nav>
+                <div class="jumbotron">
+                    <h2 style="font-family: Courier;">
+                        Thank you for choosing to donate to Among Us Chat!
+                    </h2>
+                </div>
+                <div class="container">
+                    <h4>Feel free to use this link to donate any amount to our platform. These funds will be used to upkeep the server and domain (once it's purchased).</h4>
+                    <div class="paypall"> 
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_donations" />
+                            <input type="hidden" name="business" value="TPDBRYMXHKZ3U" />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                        </form>     
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        </a>
+        <p>Made with ❤️ <a href="https://amonguschat.herokuapp.com/" target="_blank" title="Among Us Chat Online" style="text-decoration: none;">among us chat ©</a></p>
+        <div class="boxxed" style="border: 2px solid black; width:100px; margin-left:46%; margin-top:5px;margin-bottom: 15px;"><a href="http://ezweb.me/" target="_blank" style="text-decoration: none;">Hire Me</a></div>
+    </footer>
+        <style>
+        .paypall {
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+        </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
