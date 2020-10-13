@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ['amonguschat.herokuapp.com', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'app',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,5 +121,6 @@ STATICFILES_DIRS = (
 os.makedirs(STATIC_TMP, exist_ok=True)
 os.makedirs(STATIC_ROOT, exist_ok=True)
 
-# BLOG: https://data-flair.training/blogs/discussion-forum-python-django/
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
+# BLOG: https://data-flair.training/blogs/discussion-forum-python-django/

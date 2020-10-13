@@ -16,15 +16,15 @@ def home(request):
     return render(request, 'app/index.html', context)
 
 def ind(request):
-    forums=forum.objects.all().order_by('-date_created')
-    count=forums.count()
-    discussions=[]
-    for i in forums:
-        discussions.append(i.discussion_set.all())
+    forus=forum.objects.all().order_by('-date_created')
+    count=forus.count()
+    discussios=[]
+    for b in forus:
+        discussios.append(b.discussion_set.all())
  
-    context={'forums':forums,
+    context={'forus':forus,
               'count':count,
-              'discussions':discussions}
+              'discussios':discussios}
     return render(request, 'app/home.html', context)
 
 def forumm(request):
@@ -46,3 +46,41 @@ def discussionn(request):
             return redirect('/')
     context ={'form':form}
     return render(request, 'app/discussion.html', context)
+
+def detail(request, pk):
+    try:
+        game = forum.objects.get(pk=pk)
+    except forum.DoesNotExist:
+        raise Http404('Game does not exist')
+    
+    return render(request, 'app/detail.html', context={'game': game})
+
+def about(request):
+    return render(request, 'app/about.html')
+
+def contact(request):
+    return render(request, 'app/contact.html')
+
+def faq(request):
+    return render(request, 'app/faq.html')
+
+def donate(request):
+    return render(request, 'app/donate.html')
+
+def sponsor(request):
+    return render(request, 'app/sponsor.html')
+
+def servers(request):
+    return render(request, 'app/servers.html')
+
+def sponsors(request):
+    return render(request, 'app/sponsors.html')
+
+def affiliate(request):
+    return render(request, 'app/affiliate.html')
+
+def dcontact(request):
+    return render(request, 'app/dcontact.html')
+
+def collaborate(request):
+    return render(request, 'app/collaborate.html')
