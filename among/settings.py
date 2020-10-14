@@ -35,6 +35,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     # 'active_users.middleware.ActiveUsersSessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -123,4 +124,5 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # BLOG: https://data-flair.training/blogs/discussion-forum-python-django/
