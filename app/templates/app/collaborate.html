@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Among Us Chat | Work With Us</title>
+    <title>Among Us Chat | Contact Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180175294-1"></script>
@@ -70,70 +70,14 @@
                         </nav>
                         <div class="jumbotron">
                             <h2 style="font-family: Courier;">
-                                Hello, fellow gamers!
+                                If you would like to work with us, shoot us an email at <a class="dropdown-item" href="mailto:welcome.amongus@gmail.com?subject=Hi! Let's work together" style="color:green;font-family: Courier; text-decoration: none;">welcome.amongus@gmail.com</a>
                             </h2>
-                            <p style="font-family: Courier;">
+                            <!-- <p style="font-family: Courier;">
                                 This site was created by Among Us players, for Among Us players. Come join us and we will rule out the Imposters together :)
-                            </p>
+                            </p> -->
                             <!-- <small>Current active users: {{ countt }}</small> -->
-                            <div>
-                                <form method="POST" action="{% url 'forumm' %}" style="display:inline-block; margin-right: 10px;">
-                                        {% csrf_token %}
-                                    <button class="btn btn-success" style="width:fit-content;font-family: Courier;"> Add a game </button>
-                                </form>
-                                <a class="btn btn-primary btn-large" href="{% url 'about' %}" style="font-family: Courier; display:inline-block;">Learn more</a>
-                            </div>
+                            
                         </div>
-                        <table class="table mainone" style="margin-left: 15%; width:75%;">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        
-                                    </th>
-                                    <th>
-                                        Game Name
-                                    </th>
-                                    <th>
-                                        Game Code
-                                    </th>
-                                    <th>
-                                        Time Posted
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                    <!-- <h1>Popup/Modal Windows without JavaScript</h1>
-                                    <div class="box">
-                                        <a class="button" href="#popup1">Let me Pop up</a>
-                                    </div> -->
-                                {% for forum in forus %}
-                                
-                                <tr class="table-success grow">
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                        <a href="{% url 'detail' forum.pk %}"><h3 style="font-family: Courier;">{{forum.game_name}}</h3></a>
-                                    </td>
-                                    <td>
-                                        <p style="font-family: Courier;">{{forum.code}}</p>
-                                    </td>
-                                    <td>
-                                        <p style="font-family: Courier;">{{forum.date_created}}</p>
-                                    </td>
-                                    <div id="popup1" class="overlay">
-                                        <div class="popup">
-                                            <h2>What players are saying</h2>
-                                            <a class="close" href="#">&times;</a>
-                                            <div class="content">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
                         <!-- <style>
                         .mainone {
                             
@@ -142,32 +86,11 @@
                     </div>
                 </div>
                 <br><br>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>
-                            General Chat (Anonymous)
-                        </h2>
-                        {% for discuss in discussios %}
-                            
-                        {% endfor %}
-                        <form method="POST" action="{% url 'discussionn' %}">
-                            {% csrf_token %}
-                        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add comment</button>
-                        </form>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                    </div>
-                </div>
             </div>
-            <footer class="container-fluid text-center">
+            <footer class="container-fluid text-center" style="margin-top:15%;">
                 </a>
                 <p>Made with ❤️ <a href="https://amonguschat.herokuapp.com/" target="_blank" title="Among Us Chat Online" style="text-decoration: none;">among us chat ©</a></p>
-                <div class="boxxed" style="border: 2px solid black; width:100px; margin-left:46%; margin-top:5px;margin-bottom: 15px;"><a href="http://ezweb.me/" target="_blank" style="text-decoration: none;">Hire Me</a></div>
+                <div class="boxxed" style="border: 2px solid black; width:100px; margin-left:46%;"><a href="http://ezweb.me/" target="_blank" style="text-decoration: none;">Hire Me</a></div>
             </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
