@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <style>
-      ::selection {
+    ::selection {
         color: red;
         background: yellow;
     }
@@ -271,7 +271,7 @@
   <div class="row">
     <div class="col-sm-8">
       <h2>About Among Us Chat</h2><br>
-      <h4>On this site, you are able to create a new game invite, given a Game Name and the Game Code (Private or Public), and to share your thoughts on the game afterwards in the comments.
+      <h4>On this site, you are able to create a new game invite, given a Game Name and the Game Code (Private or Public).
           If you run into any problems using our site, please contact us at <a href="mailto:welcome.amongus@gmail.com?subject=Hi there!" style="text-decoration: none;">welcome.amongus@gmail.com</a>
       </h4><br>
       <p>Our mission is to bring Among Us players together, into groups of new friends they just haven't met. Also, to help crewmates catch the imposters, unless you are the imposter in which case, Good Luck!</p>
@@ -499,6 +499,8 @@
       <p><i class="fas fa-envelope"></i><a href="mailto:welcome.amongus@gmail.com?subject=Hi there!" style="text-decoration: none;"> welcome.amongus@gmail.com</a></p>
     </div>
     <div class="col-sm-7 slideanim">
+    <form class="" action="{% url 'about' %}" method="post">
+        {% csrf_token %}
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -507,12 +509,13 @@
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control" id="comments" name="message" placeholder="Comment" rows="5" required></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button class="btn pull-right" style="border: 2px solid;" type="submit">Send</button>
         </div>
       </div>
+    </form>
     </div>
   </div>
 </div>
