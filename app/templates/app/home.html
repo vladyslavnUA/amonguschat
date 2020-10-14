@@ -106,12 +106,31 @@
         }
 
         @media screen and (max-width: 700px){
-        .box{
-            width: 70%;
+            .box{
+                width: 70%;
+            }
+            .popup{
+                width: 70%;
+            }
         }
-        .popup{
-            width: 70%;
+        .shield {
+            /* font-size: 1.5rem; */
+            margin-right: 10px;
+            /* margin: 0 auto; */
+            float: left;
+            padding: 1.5rem;
+            background-color: #ffc128;
+            text-align: center;
+            font-weight: 800;
+            border: 15px solid #010000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+                "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+                sans-serif;
+            border-radius: 25px;
         }
+        ::selection {
+            color: red;
+            background: yellow;
         }
     </style>
     <div class="container-fluid">
@@ -180,6 +199,15 @@
                         <a class="btn btn-primary btn-large" href="{% url 'about' %}" style="font-family: Courier; display:inline-block;">Learn more</a>
                     </div>
                 </div>
+                <div class="column left">
+                    <div id="app">
+                        <a href="{% url 'sponsor' %}" style="text-decoration: none;">
+                        <div class="shield has-text-black-ter" v-html="selected">
+                            Your ad can be here
+                        </div>
+                        </a>
+                    </div>
+                </div>
                 <table class="table mainone" style="margin-left: 15%; width:75%;">
                     <thead>
                         <tr>
@@ -217,7 +245,7 @@
                             <td>
                                 <p style="font-family: Courier;">{{forum.date_created}}</p>
                             </td>
-                            <div id="popup1" class="overlay">
+                            <!-- <div id="popup1" class="overlay">
                                 <div class="popup">
                                     <h2>What players are saying</h2>
                                     <a class="close" href="#">&times;</a>
@@ -225,7 +253,7 @@
                                         
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -238,27 +266,6 @@
             </div>
         </div>
         <br><br>
-        <div class="row">
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-6">
-                <h2>
-                    General Chat (Anonymous)
-                </h2>
-                {% for discuss in discussios %}
-                    
-                {% endfor %}
-                <form method="POST" action="{% url 'discussionn' %}">
-                    {% csrf_token %}
-                <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add comment</button>
-                </form>
-                <p>
-                    <a class="btn" href="#">View details »</a>
-                </p>
-            </div>
-            <div class="col-md-3">
-            </div>
-        </div>
     </div>
     <footer class="container-fluid text-center">
         </a>
