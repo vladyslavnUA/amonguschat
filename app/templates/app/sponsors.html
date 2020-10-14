@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Among Us Chat | Our Sponsors</title>
+    <title>Among Us Chat | Servers</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180175294-1"></script>
@@ -68,107 +68,209 @@
                                 </ul>
                             </div>
                         </nav>
-                        <div class="jumbotron">
+                        <div class="jumbotron" style="background-color:#3ac48b; margin-left: 25%; margin-right: 25%;">
                             <h2 style="font-family: Courier;">
-                                Hello, fellow gamers!
+                                ❤️ Our Sponsors ❤️
                             </h2>
                             <p style="font-family: Courier;">
-                                This site was created by Among Us players, for Among Us players. Come join us and we will rule out the Imposters together :)
+                                    If you would like to sponsor us or put an advert on the site, shoot us an email at <a href="mailto:welcome.amongus@gmail.com?subject=Sponsorship" style="color:green;font-family: Courier; text-decoration: none;">welcome.amongus@gmail.com</a>
                             </p>
                             <!-- <small>Current active users: {{ countt }}</small> -->
-                            <div>
-                                <form method="POST" action="{% url 'forumm' %}" style="display:inline-block; margin-right: 10px;">
-                                        {% csrf_token %}
-                                    <button class="btn btn-success" style="width:fit-content;font-family: Courier;"> Add a game </button>
-                                </form>
-                                <a class="btn btn-primary btn-large" href="{% url 'about' %}" style="font-family: Courier; display:inline-block;">Learn more</a>
-                            </div>
                         </div>
-                        <table class="table mainone" style="margin-left: 15%; width:75%;">
+                        <div class="container">
+                                {% include 'app/this.html' %}
+                        </div>
+                        </div>
+                        <!-- <table class="table mainone" style="margin-left: 15%; width:75%;">
                             <thead>
                                 <tr>
                                     <th>
                                         
                                     </th>
                                     <th>
-                                        Game Name
+                                        Website Name
                                     </th>
                                     <th>
-                                        Game Code
+                                        Website Link
                                     </th>
                                     <th>
-                                        Time Posted
+                                        Date Added
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                    <!-- <h1>Popup/Modal Windows without JavaScript</h1>
-                                    <div class="box">
-                                        <a class="button" href="#popup1">Let me Pop up</a>
-                                    </div> -->
-                                {% for forum in forus %}
                                 
                                 <tr class="table-success grow">
                                     <td>
                                         
                                     </td>
                                     <td>
-                                        <a href="{% url 'detail' forum.pk %}"><h3 style="font-family: Courier;">{{forum.game_name}}</h3></a>
+                                        <h3 style="font-family: Courier;">Sample Website</h3>
                                     </td>
                                     <td>
-                                        <p style="font-family: Courier;">{{forum.code}}</p>
+                                        <a href="{% url 'ind' %}" style="text-decoration: none;"><p style="font-family: Courier;">Website Link</p></a>
                                     </td>
                                     <td>
-                                        <p style="font-family: Courier;">{{forum.date_created}}</p>
+                                        <p style="font-family: Courier;">4068 BCE</p>
                                     </td>
-                                    <div id="popup1" class="overlay">
-                                        <div class="popup">
-                                            <h2>What players are saying</h2>
-                                            <a class="close" href="#">&times;</a>
-                                            <div class="content">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
                                 </tr>
-                                {% endfor %}
                             </tbody>
-                        </table>
-                        <!-- <style>
-                        .mainone {
-                            
-                        }
-                        </style> -->
+                        </table> -->
+                        <style>
+                        h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+                        </style>
                     </div>
                 </div>
                 <br><br>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>
-                            General Chat (Anonymous)
-                        </h2>
-                        {% for discuss in discussios %}
-                            
-                        {% endfor %}
-                        <form method="POST" action="{% url 'discussionn' %}">
-                            {% csrf_token %}
-                        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add comment</button>
-                        </form>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                    </div>
-                </div>
             </div>
-            <footer class="container-fluid text-center">
+            <footer class="container-fluid text-center" style="margin-top: 15%;">
                 </a>
                 <p>Made with ❤️ <a href="https://amonguschat.herokuapp.com/" target="_blank" title="Among Us Chat Online" style="text-decoration: none;">among us chat ©</a></p>
                 <div class="boxxed" style="border: 2px solid black; width:100px; margin-left:46%; margin-top:5px; margin-bottom: 15px;"><a href="http://ezweb.me/" target="_blank" style="text-decoration: none;">Hire Me</a></div>
             </footer>
+    <script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
