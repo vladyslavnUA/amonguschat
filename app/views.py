@@ -61,9 +61,31 @@ def detail(request, pk):
     return render(request, 'app/detail.html', context)
 
 def about(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        contactus = Contact()
+        contactus.name = name
+        contactus.email = email
+        contactus.message = message
+        contactus.save()
+        print('submitted')
     return render(request, 'app/about.html')
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        contactus = Contact()
+        contactus.name = name
+        contactus.email = email
+        contactus.message = message
+        contactus.save()
+        print('submitted')
     return render(request, 'app/contact.html')
 
 def faq(request):
