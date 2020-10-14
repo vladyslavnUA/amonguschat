@@ -48,12 +48,17 @@ def discussionn(request):
     return render(request, 'app/discussion.html', context)
 
 def detail(request, pk):
+    forus=forum.objects.all().order_by('-date_created')
+    # discussios=[]
     try:
+        # for b in forus:
+        #     discussios.append(b.discussion_set.all()) , 'discussios':discussios
         game = forum.objects.get(pk=pk)
+        context={'game': game}
     except forum.DoesNotExist:
         raise Http404('Game does not exist')
     
-    return render(request, 'app/detail.html', context={'game': game})
+    return render(request, 'app/detail.html', context)
 
 def about(request):
     return render(request, 'app/about.html')
@@ -84,3 +89,15 @@ def dcontact(request):
 
 def collaborate(request):
     return render(request, 'app/collaborate.html')
+
+
+
+
+# EXTRA CODE
+# {% for objs in discuss %}
+#     {{ objs.discuss }}
+#     <br>
+#     {% if objs|length > 4 %}
+#         <button onclick="myFunction()" id="myBtn">Read more</button>
+#     {% endif %}
+# {% endfor %}
