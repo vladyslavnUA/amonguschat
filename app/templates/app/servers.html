@@ -68,21 +68,14 @@
                                 </ul>
                             </div>
                         </nav>
-                        <div class="jumbotron">
+                        <div class="jumbotron" style="background-color:yellowgreen; margin-left: 25%; margin-right: 25%;">
                             <h2 style="font-family: Courier;">
-                                Hello, fellow gamers!
+                                Server List for Discord, Slack, Telegram, Steam, etc.
                             </h2>
                             <p style="font-family: Courier;">
-                                This site was created by Among Us players, for Among Us players. Come join us and we will rule out the Imposters together :)
+                                All servers are checked before being published. <a href="{% url 'contact' %}" style="text-decoration: none;">Contact us</a> if you'd like us to list your server here.
                             </p>
                             <!-- <small>Current active users: {{ countt }}</small> -->
-                            <div>
-                                <form method="POST" action="{% url 'forumm' %}" style="display:inline-block; margin-right: 10px;">
-                                        {% csrf_token %}
-                                    <button class="btn btn-success" style="width:fit-content;font-family: Courier;"> Add a game </button>
-                                </form>
-                                <a class="btn btn-primary btn-large" href="{% url 'about' %}" style="font-family: Courier; display:inline-block;">Learn more</a>
-                            </div>
                         </div>
                         <table class="table mainone" style="margin-left: 15%; width:75%;">
                             <thead>
@@ -91,13 +84,13 @@
                                         
                                     </th>
                                     <th>
-                                        Game Name
+                                        Server Name
                                     </th>
                                     <th>
-                                        Game Code
+                                        Server Link
                                     </th>
                                     <th>
-                                        Time Posted
+                                        Date Added
                                     </th>
                                 </tr>
                             </thead>
@@ -106,32 +99,21 @@
                                     <div class="box">
                                         <a class="button" href="#popup1">Let me Pop up</a>
                                     </div> -->
-                                {% for forum in forus %}
                                 
                                 <tr class="table-success grow">
                                     <td>
                                         
                                     </td>
                                     <td>
-                                        <a href="{% url 'detail' forum.pk %}"><h3 style="font-family: Courier;">{{forum.game_name}}</h3></a>
+                                        <h3 style="font-family: Courier;">Sample Server</h3>
                                     </td>
                                     <td>
-                                        <p style="font-family: Courier;">{{forum.code}}</p>
+                                        <a href="{% url 'ind' %}" style="text-decoration: none;"><p style="font-family: Courier;">Sample Link</p></a>
                                     </td>
                                     <td>
-                                        <p style="font-family: Courier;">{{forum.date_created}}</p>
+                                        <p style="font-family: Courier;">2058 BCE</p>
                                     </td>
-                                    <div id="popup1" class="overlay">
-                                        <div class="popup">
-                                            <h2>What players are saying</h2>
-                                            <a class="close" href="#">&times;</a>
-                                            <div class="content">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
                                 </tr>
-                                {% endfor %}
                             </tbody>
                         </table>
                         <!-- <style>
@@ -142,29 +124,8 @@
                     </div>
                 </div>
                 <br><br>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>
-                            General Chat (Anonymous)
-                        </h2>
-                        {% for discuss in discussios %}
-                            
-                        {% endfor %}
-                        <form method="POST" action="{% url 'discussionn' %}">
-                            {% csrf_token %}
-                        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add comment</button>
-                        </form>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                    </div>
-                </div>
             </div>
-            <footer class="container-fluid text-center">
+            <footer class="container-fluid text-center" style="margin-top: 15%;">
                 </a>
                 <p>Made with ❤️ <a href="https://amonguschat.herokuapp.com/" target="_blank" title="Among Us Chat Online" style="text-decoration: none;">among us chat ©</a></p>
                 <div class="boxxed" style="border: 2px solid black; width:100px; margin-left:46%; margin-top:5px; margin-bottom: 15px;"><a href="http://ezweb.me/" target="_blank" style="text-decoration: none;">Hire Me</a></div>
