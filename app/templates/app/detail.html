@@ -115,7 +115,7 @@
                     <div class="column middle">
                         <h3><strong>Game Name:</strong> {{ game.game_name }}</h3>
                         <p><strong>Game Code: {{ game.code }} </strong></p>
-                        <p><strong>Posted on:</strong> {{ game.date_created }}</p>
+                        <p><strong>Posted on:</strong> {{ game.date_created | timesince}} ago, <i>({{ game.date_created }})</i></p>
                         <br><br>
                         <!-- <div class="row">
                                 <div class="col-md-3">
