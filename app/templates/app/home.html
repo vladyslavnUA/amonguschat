@@ -189,7 +189,8 @@
                         Hello, fellow gamers!
                     </h2>
                     <p style="font-family: Courier;">
-                        This site was created by Among Us players, for Among Us players. Come join us and we will rule out the Imposters together :)
+                        This site was created by Among Us players, for Among Us players. Come join us and we will rule out the Imposters together :) <br>
+                        <i style="font-size: 12px;">P.S. We refresh the games every 12 hours or sooner, so as to avoid a backlog of expired games. Note: you can always just add a new game at any time.</i>
                     </p>
                     <!-- <small>Current active users: {{ countt }}</small> -->
                     <div>
@@ -244,7 +245,7 @@
                                 <p style="font-family: Courier;">{{forum.code}}</p>
                             </td>
                             <td>
-                                <p style="font-family: Courier;">{{forum.date_created}}</p>
+                                <p style="font-family: Courier;">{{forum.date_created | timesince}} ago, <br><i style="font-size: 12px;">({{ forum.date_created }})</i></p>
                             </td>
                             <!-- <div id="popup1" class="overlay">
                                 <div class="popup">
