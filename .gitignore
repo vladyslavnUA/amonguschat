@@ -1,1 +1,4 @@
 vlad/
+app/__pycache__/
+among/__pycache__/
+.env
